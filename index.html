@@ -17,9 +17,11 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--light-bg); color: var(--primary); line-height: 1.6; }
         
         /* Header */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: var(--white); box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-container img { height: 40px; object-fit: contain; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 8%; background: var(--white); box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo-container { display: flex; align-items: center; }
+        /* აქ გავადიდეთ ლოგოს სიმაღლე 62 პიქსელამდე, რომ კარგად და მკაფიოდ ჩანდეს */
+        .logo-container img { height: 62px; width: auto; object-fit: contain; }
+        
         .nav-links { display: flex; gap: 30px; list-style: none; font-size: 14px; font-weight: 500; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--primary); transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent); }
@@ -65,7 +67,6 @@
         [data-lang] { display: none; }
         body.lang-ka [data-lang="ka"] { display: block; }
         body.lang-en [data-lang="en"] { display: block; }
-        /* Inline elements fix */
         span[data-lang] { display: none; }
         body.lang-ka span[data-lang="ka"] { display: inline; }
         body.lang-en span[data-lang="en"] { display: inline; }
@@ -75,6 +76,7 @@
             .hero-content h1 { font-size: 32px; }
             .nav-links { display: none; }
             .why-text { text-align: left; }
+            .logo-container img { height: 50px; }
         }
     </style>
 </head>
